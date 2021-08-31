@@ -5,5 +5,5 @@ window.onload = () => {
         navigator.serviceWorker
             .register('./sw.js');
     }
-    document.querySelector('#my-manifest-placeholder').setAttribute('href', '../mainfest_Brey.json');
+    document.querySelector('#my-manifest-placeholder').setAttribute('href', '../PWA-TEST/mainfest_Brey.json');
 }
