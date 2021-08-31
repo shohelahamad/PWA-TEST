@@ -1,9 +1,17 @@
 window.onload = () => {
     'use strict';
-
+    var storage = window.localStorage;
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker
             .register('./sw.js');
+    }
+    document.getElementById('Brey').onclick = function() {
+        storage.setItem('ort', JSON.stringify('Brey'));
+        location.reload();
+    }
+    document.getElementById('Oberfell').onclick = function() {
+        storage.setItem('ort', JSON.stringify('Oberfell'));
+        location.reload();
     }
 
     var link = document.querySelector("link[rel~='icon']");
@@ -12,13 +20,13 @@ window.onload = () => {
         link.rel = 'icon';
         document.getElementsByTagName('head')[0].appendChild(link);
     }
-    let main_city_id = true;
-    // let main_city_id = JSON.parse(window.localStorage.getItem("main_city"));
+    let main_city_id = JSON.parse(window.localStorage.getItem("ort"));
     if (main_city_id) {
-        link.href = '../PWA-TEST/images/Wappen_Brey.png';
+        link.href = `../PWA-TEST/images/Wappen_${main_city_id}.png`;
+        document.querySelector('#my-manifest-placeholder').setAttribute('href', `../PWA-TEST/mainfest_${main_city_id}.json`);
     } else {
         link.href = 'favicon.ico';
+        document.querySelector('#my-manifest-placeholder').setAttribute('href', `../PWA-TEST/mainfest_Brey.json`);
     }
 
-    document.querySelector('#my-manifest-placeholder').setAttribute('href', '../PWA-TEST/mainfest_Brey.json');
 }
