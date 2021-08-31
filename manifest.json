@@ -2,12 +2,12 @@
     "name": "PWA_test",
     "short_name": "Hello",
     "icons": [{
-            "src": "images/hello-icon-128.png",
+            "src": "images/Wappen_Brey.png",
             "sizes": "128x128",
             "type": "image/png"
         },
         {
-            "src": "images/hello-icon-256.png",
+            "src": "images/Wappen_Brey.png",
             "sizes": "256x256",
             "type": "image/png"
         }
