@@ -23,7 +23,7 @@ window.onload = () => {
     let main_city_id = JSON.parse(window.localStorage.getItem("ort"));
     if (main_city_id) {
         link.href = `../PWA-TEST/images/Wappen_${main_city_id}.png`;
-        document.querySelector('#my-manifest-placeholder').setAttribute('href', `../PWA-TEST/mainfest_${main_city_id}.json`);
+        document.querySelector('#my-manifest-placeholder').setAttribute('href', `../PWA-TEST/mamifest_${main_city_id}.json`);
     } else {
         link.href = 'favicon.ico';
         document.querySelector('#my-manifest-placeholder').setAttribute('href', `../PWA-TEST/manifest_Oberfell.json`);
