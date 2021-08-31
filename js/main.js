@@ -26,7 +26,7 @@ window.onload = () => {
         document.querySelector('#my-manifest-placeholder').setAttribute('href', `../PWA-TEST/mainfest_${main_city_id}.json`);
     } else {
         link.href = 'favicon.ico';
-        document.querySelector('#my-manifest-placeholder').setAttribute('href', `../PWA-TEST/mainfest_Oberfell.json`);
+        document.querySelector('#my-manifest-placeholder').setAttribute('href', `../PWA-TEST/manifest_Oberfell.json`);
     }
 
 }
