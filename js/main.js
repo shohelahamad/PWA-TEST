@@ -13,7 +13,7 @@ window.onload = () => {
         "background_color": "#000000",
         "theme_color": "#0f4a73",
         "icons": [{
-            "src": "../images/Wappen_Brey.png",
+            "src": "https://shohelahamad.github.io/PWA-TEST/images/Wappen_Brey.png",
             "sizes": "256x256",
             "type": "image/png"
         }]
